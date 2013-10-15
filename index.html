@@ -38,6 +38,15 @@
 <div data-hull-component="login/profile@hull"></div>
 <div data-hull-component="comments/list@hull" data-hull-uid="MY_UNIQUE_ID"></div>
 
+<script type="text/x-template" data-hull-template="login/profile">
+{{#if loggedIn}}
+  Hello {{name}}, how are you since the last time we met?
+{{else}}
+  I don't know you, but I already like you!
+  <button data-hull-action="login" data-hull-provider="facebook">Login with Facebook</button>
+{{/if}}
+</script>
+
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
